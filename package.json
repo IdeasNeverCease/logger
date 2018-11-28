@@ -1,0 +1,53 @@
+{
+  "author": {
+    "email": "paul@inc.sh",
+    "name": "Paul Anthony Webb"
+  },
+  "bugs": {
+    "url": "https://hub.socii.network/inc"
+  },
+  "dependencies": {
+    "colorette": "^1.0.7",
+    "commander": "^2.19.0",
+    "lodash": "^4.17.11",
+    "pino": "^5.9.0",
+    "pump": "^3.0.0",
+    "split2": "^3.0.0",
+    "through2": "^3.0.0"
+  },
+  "description": "A logging module to unify logging across services.",
+  "devDependencies": {
+    "@inc/eslint-config": "^1.1.2",
+    "eslint": "^5.9.0",
+    "husky": "^1.2.0",
+    "npm-run-all": "^4.1.5",
+    "snazzy": "^8.0.0",
+    "standardx": "^3.0.1",
+    "updates": "^5.4.2"
+  },
+  "engines": {
+    "node": ">=11.0.0"
+  },
+  "eslintConfig": {
+    "extends": "@inc"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format && git add -A :/"
+    }
+  },
+  "license": "BSD-3-Clause",
+  "main": "index.js",
+  "name": "@inc/logger",
+  "repository": {
+    "type": "git",
+    "url": "https://inc.sh/IdeasNeverCease/logger.git"
+  },
+  "scripts": {
+    "format": "eslint '**/*.js' --fix",
+    "test": "run-s test:*",
+    "test:dependencies": "updates -u ./",
+    "test:lint": "standardx --verbose | snazzy"
+  },
+  "version": "1.0.0"
+}
