@@ -11,6 +11,7 @@
     "commander": "^2.19.0",
     "lodash": "^4.17.11",
     "pino": "^5.9.0",
+    "pino-pretty": "^2.2.4",
     "pump": "^3.0.0",
     "split2": "^3.0.0",
     "through2": "^3.0.0"
@@ -50,5 +51,5 @@
     "test:dependencies": "updates -u ./",
     "test:lint": "standardx --verbose | snazzy"
   },
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
