@@ -31,6 +31,7 @@
   "eslintConfig": {
     "extends": "@inc"
   },
+  "homepage": "https://git.inc.sh/IdeasNeverCease/logger",
   "husky": {
     "hooks": {
       "pre-commit": "npm run format && git add -A :/"
@@ -41,7 +42,7 @@
   "name": "@inc/logger",
   "repository": {
     "type": "git",
-    "url": "https://inc.sh/IdeasNeverCease/logger.git"
+    "url": "https://git.inc.sh/IdeasNeverCease/logger.git"
   },
   "scripts": {
     "format": "eslint '**/*.js' --fix",
@@ -49,5 +50,5 @@
     "test:dependencies": "updates -u ./",
     "test:lint": "standardx --verbose | snazzy"
   },
-  "version": "1.0.0"
+  "version": "1.0.1"
 }
