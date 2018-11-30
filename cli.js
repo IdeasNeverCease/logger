@@ -5,7 +5,7 @@
 
 //  P A C K A G E S
 
-const colors = require("colorette");
+const color = require("colorette");
 const { pretty } = require("pino");
 const program = require("commander");
 const pump = require("pump");
@@ -27,7 +27,7 @@ const transformer = through.obj((chunk, enc, cb) => {
 
   // Non-JSON logs
   if (!regex.test(chunk)) {
-    return cb(null, `${colors.green(herokuSyslog)}${message}\n`);
+    return cb(null, `${color.green(herokuSyslog)}${message}\n`);
   }
 
   // Parse JSON
@@ -37,7 +37,7 @@ const transformer = through.obj((chunk, enc, cb) => {
     parsed = JSON.parse(chunk.match(regex)[1]);
   } catch (e) {
     // Not a valid JSON line, log it as is
-    return cb(null, `${colors.green(herokuSyslog)}${message}\n`);
+    return cb(null, `${color.green(herokuSyslog)}${message}\n`);
   }
 
   // Cherry picked default properties
