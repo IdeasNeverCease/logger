@@ -26,16 +26,15 @@ const transformer = through.obj((chunk, enc, cb) => {
   const [, herokuSyslog, message] = chunk.match(/^(.*?]:)(\s.*)$/);
 
   // Non-JSON logs
-  if (!regex.test(chunk)) {
+  if (!regex.test(chunk))
     return cb(null, `${color.green(herokuSyslog)}${message}\n`);
-  }
 
   // Parse JSON
   let parsed;
 
   try {
     parsed = JSON.parse(chunk.match(regex)[1]);
-  } catch (e) {
+  } catch(error) {
     // Not a valid JSON line, log it as is
     return cb(null, `${color.green(herokuSyslog)}${message}\n`);
   }

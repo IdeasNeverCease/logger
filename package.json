@@ -7,24 +7,24 @@
     "url": "https://hub.socii.network/inc"
   },
   "dependencies": {
-    "colorette": "^1.0.7",
-    "commander": "^2.19.0",
-    "lodash": "^4.17.11",
-    "pino": "^5.9.0",
-    "pino-pretty": "^2.2.4",
+    "colorette": "^1.1.0",
+    "commander": "^2.20.0",
+    "lodash": "^4.17.15",
+    "pino": "^5.13.1",
+    "pino-pretty": "^3.2.0",
     "pump": "^3.0.0",
-    "split2": "^3.0.0",
-    "through2": "^3.0.0"
+    "split2": "^3.1.1",
+    "through2": "^3.0.1"
   },
   "description": "A logging module to unify logging across services.",
   "devDependencies": {
-    "@inc/eslint-config": "^1.1.2",
-    "eslint": "^5.9.0",
-    "husky": "^1.2.0",
+    "@inc/eslint-config": "^2019.7.23",
+    "eslint": "^6.1.0",
+    "husky": "^3.0.1",
     "npm-run-all": "^4.1.5",
     "snazzy": "^8.0.0",
-    "standardx": "^3.0.1",
-    "updates": "^5.4.2"
+    "standardx": "^4.0.0",
+    "updates": "^8.5.1"
   },
   "engines": {
     "node": ">=11.0.0"
@@ -32,7 +32,7 @@
   "eslintConfig": {
     "extends": "@inc"
   },
-  "homepage": "https://git.inc.sh/IdeasNeverCease/logger",
+  "homepage": "https://code.webb.page/IdeasNeverCease/logger",
   "husky": {
     "hooks": {
       "pre-commit": "npm run format && git add -A :/"
@@ -41,15 +41,12 @@
   "license": "BSD-3-Clause",
   "main": "index.js",
   "name": "@inc/logger",
-  "repository": {
-    "type": "git",
-    "url": "https://git.inc.sh/IdeasNeverCease/logger.git"
-  },
+  "repository": "https://code.webb.page/IdeasNeverCease/logger",
   "scripts": {
     "format": "eslint '**/*.js' --fix",
     "test": "run-s test:*",
-    "test:dependencies": "updates -u ./",
+    "test:dependencies": "updates --update ./",
     "test:lint": "standardx --verbose | snazzy"
   },
-  "version": "1.0.3"
+  "version": "2019.07.23"
 }

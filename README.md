@@ -1,6 +1,6 @@
 # @inc/logger
 
-[![INC](https://img.shields.io/badge/%F0%9F%92%A1-IdeasNeverCease/logger-51dcfb.svg?style=flat-square)](https://git.inc.sh/IdeasNeverCease/logger)
+[![✨](https://img.shields.io/badge/%E2%9C%A8-IdeasNeverCease/logger-51dcfb.svg?style=flat-square)](https://code.webb.page/IdeasNeverCease/logger)
 
 > A module to unify logging across services.
 
